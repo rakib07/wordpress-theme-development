@@ -1,0 +1,13 @@
+wp enque style sheet and Javascript assets
+
+function rakib_Wp_css_jss_enqueue {
+    wp_enqueue_style( $handle, $src, $deps, $ver, $media );
+    
+    example : wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.min.css', array(), '1.0', 'all' );
+    
+  /////////// regiseter new fucntion for Enqueue all CSS files///////////////////
+   
+   add_action ('rakib_Wp_css_jss_enqueue', '');
+
+wp_enqueue_style('responsive-css', get_template_directory_uri().'/assets/css/responsive.css', array(), '1.0', 'all' );  *// (others Css files load method //* 
+wp_enqueue_style('style-css', get_stylesheet_uri());  *// wordpress Defalts Css file loade//* 
