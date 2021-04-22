@@ -1,0 +1,10 @@
+// Slider Custom Post
+
+	register_post_type('sliders', array(
+        'labels' => array(
+            'name' => __('Slides', 'halim'),
+            'singular_name' => __('Slider', 'halim')
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields')
+    ));
